@@ -11,7 +11,12 @@ const inter = Inter({
 export const metadata = {
   title: "Young Wolf Production | Engineering & Remote Operations",
   description:
-    "Certified engineering and remote operations company delivering precision, technology, and practical expertise."
+    "Certified engineering and remote operations company delivering precision, technology, and practical expertise.",
+  icons: {
+    icon: "/youngwolflogo.png",
+    shortcut: "/youngwolflogo.png",
+    apple: "/youngwolflogo.png"
+  }
 };
 
 export default function RootLayout({ children }) {

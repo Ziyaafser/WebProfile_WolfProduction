@@ -146,6 +146,25 @@ a {
   color: var(--muted);
 }
 
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__menu-toggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .theme-toggle {
   border: none;
   background: transparent;
@@ -1061,6 +1080,23 @@ html[data-theme="light"] .services__panel-count {
   gap: 24px;
 }
 
+.machinery__mobile {
+  display: none;
+}
+
+.machinery__arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(211, 180, 106, 0.5);
+  background: rgba(12, 12, 12, 0.8);
+  color: rgb(211, 180, 106);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 .featured__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 360px));
@@ -1658,6 +1694,14 @@ html[data-theme="light"] .projects__carousel.glass::before {
   overflow: hidden;
 }
 
+.project__controls {
+  display: contents;
+}
+
+.project__advance--next {
+  display: none;
+}
+
 .project__advance::before {
   content: "";
   position: absolute;
@@ -1688,6 +1732,10 @@ html[data-theme="light"] .projects__carousel.glass::before {
   border-radius: 3px;
   transform: translateX(2px) rotate(45deg);
   
+}
+
+.project__advance-icon--right {
+  transform: translateX(-2px) rotate(-135deg);
 }
 
 .project__advance:hover {
@@ -1873,10 +1921,15 @@ html[data-theme="dark"] .contact__item .icon {
   gap: 14px;
 }
 
+.contact__cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .contact__quick-actions {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
+  position: static;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1970,7 +2023,7 @@ html[data-theme="dark"] .contact__form.glass {
 }
 
 .contact__form h3 {
-  margin-right: 96px;
+  margin-right: 0;
 }
 
 .contact__form input,
@@ -2139,6 +2192,15 @@ html[data-theme="light"] .footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .machinery__grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .machine {
+    min-width: 0;
+  }
+
   .products__showcase {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -2198,6 +2260,73 @@ html[data-theme="light"] .footer {
 }
 
 @media (max-width: 700px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 4vw;
+  }
+
+  .nav__brand {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav__brand > span:last-child {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand__badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .brand__logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav__actions {
+    gap: 8px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .nav__actions .theme-toggle__track {
+    min-width: 90px;
+    height: 34px;
+    padding: 8px 16px;
+  }
+
+  .nav__actions .theme-toggle__thumb.is-light {
+    transform: translate(-52px, -50%);
+  }
+
+  .nav__menu-toggle {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .nav__links {
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 6px 0 4px;
+    text-align: center;
+  }
+
+  .nav__links.is-open {
+    display: flex;
+  }
+
   .hero__credentials-group {
     gap: 14px;
     padding-right: 14px;
@@ -2205,6 +2334,18 @@ html[data-theme="light"] .footer {
 
   .hero__credential-card {
     width: 94px;
+  }
+
+  .hero__subtitle {
+    max-width: min(92vw, 310px);
+    padding: 7px 14px;
+    font-size: clamp(0.82rem, 3.2vw, 0.95rem);
+    line-height: 1.24;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-wrap: balance;
   }
 
   .services__panel {
@@ -2224,6 +2365,22 @@ html[data-theme="light"] .footer {
     grid-template-columns: 1fr;
   }
 
+  .machinery__grid {
+    display: none;
+  }
+
+  .machinery__mobile {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .machinery__mobile-card {
+    width: 100%;
+    min-width: 0;
+  }
+
   .tech-flip {
     min-height: 320px;
   }
@@ -2233,29 +2390,83 @@ html[data-theme="light"] .footer {
     margin-top: 4px;
   }
 
+  .product-pair--left .product-card__stack,
+  .product-pair--right .product-card__stack {
+    margin-left: 0;
+    justify-self: center;
+  }
+
   .projects__carousel {
     padding: 16px;
   }
 
   .project__active {
-    min-height: 360px;
+    min-height: 410px;
   }
 
   .project__active-overlay {
-    padding: 18px 16px;
+    padding: 14px 12px;
   }
 
   .project__active-copy {
-    padding: 12px 12px 10px;
+    max-width: calc(100% - 8px);
+    padding: 10px 10px 9px;
     border-radius: 14px;
   }
 
   .project__active-copy h3 {
-    font-size: 1.6rem;
+    font-size: 1.36rem;
+    margin-bottom: 8px;
+  }
+
+  .project__active-copy p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .project__active-overlay span {
+    margin-top: 10px;
+    font-size: 0.76rem;
   }
 
   .project__upcoming {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+
+  .project__tile {
+    flex: 0 0 44%;
+    min-height: 172px;
+  }
+
+  .project__controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .project__advance {
+    margin: 10px auto 0;
+    position: static;
+    transform: none;
+  }
+
+  .project__advance--next {
+    display: inline-grid;
+  }
+
+  .project__advance:hover,
+  .project__advance--next:hover {
+    transform: translateY(-2px);
   }
 
   .tech-flip:hover .tech-flip__inner,
@@ -2276,13 +2487,136 @@ html[data-theme="light"] .footer {
     gap: 10px;
   }
 
+  .footer {
+    padding: 26px 4vw;
+    gap: 18px;
+  }
+
+  .footer__top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  .footer__logo {
+    grid-column: 1 / -1;
+    place-items: center;
+  }
+
+  .footer__logo img {
+    margin-top: -10px;
+    width: 128px;
+    height: 128px;
+  }
+
+  .footer__company,
+  .footer__links {
+    min-width: 0;
+  }
+
+  .footer__company {
+    margin-left: 0;
+  }
+
+  .footer__links {
+    justify-self: end;
+    text-align: left;
+  }
+
+  .footer__links h5,
+  .footer__company h5 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .footer__company p,
+  .footer__links a {
+    font-size: 0.86rem;
+    line-height: 1.35;
+  }
+
+  .footer__bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 4px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .footer__bottom span {
+    display: block;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
   .contact__quick-actions {
-    position: static;
-    margin-top: -2px;
-    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .contact__quick-action {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact__quick-action svg {
+    width: 16px;
+    height: 16px;
   }
 
   .contact__form h3 {
     margin-right: 0;
+  }
+
+  .contact__form .cta {
+    margin-right: 0;
+    margin-top: 0;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    padding: 12px 22px;
+  }
+
+  .contact__item {
+    padding: 14px;
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+  }
+
+  .contact__item .icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .contact__item small {
+    font-size: 0.8rem;
+  }
+
+  .contact__item p {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .featured__img {
+    min-height: 240px;
+    background: #050505;
+  }
+
+  .featured__img-image {
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    transition: opacity 560ms ease-in-out;
+  }
+
+  .featured__img::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 20%, rgba(0, 0, 0, 0.2) 100%);
   }
 }

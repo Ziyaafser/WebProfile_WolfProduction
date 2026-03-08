@@ -107,7 +107,16 @@ export default function ServicesSection() {
   const { theme } = useTheme();
   const [activeTab, setActiveTab] = useState(services.tabs[0].id);
   const [activeTechCard, setActiveTechCard] = useState(null);
+  const [activeMachineIndex, setActiveMachineIndex] = useState(0);
   const currentTab = services.tabs.find((tab) => tab.id === activeTab) ?? services.tabs[0];
+
+  const goPrevMachine = () => {
+    setActiveMachineIndex((prev) => (prev - 1 + machinery.length) % machinery.length);
+  };
+
+  const goNextMachine = () => {
+    setActiveMachineIndex((prev) => (prev + 1) % machinery.length);
+  };
 
   return (
     <div className="services-section" id="services">
@@ -217,6 +226,72 @@ export default function ServicesSection() {
             </article>
             );
           })}
+        </div>
+        <div className="machinery__mobile">
+          <button
+            type="button"
+            className="machinery__arrow"
+            aria-label="Previous machinery card"
+            onClick={goPrevMachine}
+          >
+            ←
+          </button>
+          {(() => {
+            const item = machinery[activeMachineIndex];
+            const machineryImage = machineryImages[item.title];
+
+            return (
+              <article
+                key={item.title}
+                className="machine glass machinery__mobile-card"
+                style={machineryImage ? { "--machine-bg": `url(${machineryImage})` } : undefined}
+              >
+                <svg className="machine__snake" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <rect
+                    className="machine__snake-glow"
+                    x="0.35"
+                    y="0.35"
+                    width="99.3"
+                    height="99.3"
+                    rx="7.4"
+                    ry="7.4"
+                    pathLength="100"
+                  />
+                  <rect
+                    className="machine__snake-line"
+                    x="0.35"
+                    y="0.35"
+                    width="99.3"
+                    height="99.3"
+                    rx="7.4"
+                    ry="7.4"
+                    pathLength="100"
+                  />
+                </svg>
+                <div className="machine__img" aria-hidden="true">
+                  {machineryImage ? (
+                    <Image
+                      src={machineryImage}
+                      alt=""
+                      fill
+                      className="machine__bg-image"
+                      aria-hidden="true"
+                    />
+                  ) : null}
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </article>
+            );
+          })()}
+          <button
+            type="button"
+            className="machinery__arrow"
+            aria-label="Next machinery card"
+            onClick={goNextMachine}
+          >
+            →
+          </button>
         </div>
       </section>
 
