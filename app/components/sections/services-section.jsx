@@ -97,9 +97,16 @@ const machineryImages = {
   "Fiber Laser Weld Machine & TIG Weld": "/machinery/fiberlaserweld.jpeg"
 };
 
+const technologyImages = [
+  "/advancedtechnology/lidarinspection3dstructure.png",
+  "/advancedtechnology/autocad2d3d.jpg",
+  "/advancedtechnology/irthermalimaging.jpeg"
+];
+
 export default function ServicesSection() {
   const { theme } = useTheme();
   const [activeTab, setActiveTab] = useState(services.tabs[0].id);
+  const [activeTechCard, setActiveTechCard] = useState(null);
   const currentTab = services.tabs.find((tab) => tab.id === activeTab) ?? services.tabs[0];
 
   return (
@@ -172,6 +179,28 @@ export default function ServicesSection() {
               className="machine glass"
               style={machineryImage ? { "--machine-bg": `url(${machineryImage})` } : undefined}
             >
+              <svg className="machine__snake" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <rect
+                  className="machine__snake-glow"
+                  x="0.35"
+                  y="0.35"
+                  width="99.3"
+                  height="99.3"
+                  rx="7.4"
+                  ry="7.4"
+                  pathLength="100"
+                />
+                <rect
+                  className="machine__snake-line"
+                  x="0.35"
+                  y="0.35"
+                  width="99.3"
+                  height="99.3"
+                  rx="7.4"
+                  ry="7.4"
+                  pathLength="100"
+                />
+              </svg>
               <div className="machine__img" aria-hidden="true">
                 {machineryImage ? (
                   <Image
@@ -196,25 +225,49 @@ export default function ServicesSection() {
           <p>TECHNOLOGIES</p>
           <h2>Advanced Technologies</h2>
         </div>
-        <div className="tech__grid">
-          <div className="tech__image" />
-          <div className="tech__card glass">
-            <div className="icon">▣</div>
-            <h3>{technologies[0].title}</h3>
-            <p>{technologies[0].desc}</p>
-          </div>
-          <div className="tech__card glass">
-            <div className="icon">✎</div>
-            <h3>{technologies[1].title}</h3>
-            <p>{technologies[1].desc}</p>
-          </div>
-          <div className="tech__image tech__image--right" />
-          <div className="tech__image tech__image--solar" />
-          <div className="tech__card glass">
-            <div className="icon">☀</div>
-            <h3>{technologies[2].title}</h3>
-            <p>{technologies[2].desc}</p>
-          </div>
+        <div className="tech__grid tech__grid--flip">
+          {technologies.map((item, index) => (
+            <article
+              key={item.title}
+              className={`tech-flip ${activeTechCard === index ? "is-flipped" : ""}`}
+            >
+              <div className="tech-flip__inner">
+                <div className="tech-flip__face tech-flip__front">
+                  <Image
+                    src={technologyImages[index]}
+                    alt={item.title}
+                    fill
+                    className="tech-flip__image"
+                  />
+                  <div className="tech-flip__overlay">
+                    <h3>{item.title}</h3>
+                    <button
+                      type="button"
+                      className="tech-flip__more"
+                      aria-label={`More about ${item.title}`}
+                      aria-expanded={activeTechCard === index}
+                      onClick={() =>
+                        setActiveTechCard((current) => (current === index ? null : index))
+                      }
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+                <div className="tech-flip__face tech-flip__back">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                  <button
+                    type="button"
+                    className="tech-flip__more tech-flip__more--back"
+                    onClick={() => setActiveTechCard(null)}
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </div>
