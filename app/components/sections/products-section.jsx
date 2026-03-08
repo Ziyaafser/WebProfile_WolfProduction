@@ -37,18 +37,18 @@ export default function ProductsSection() {
         <article className="product-pair product-pair--right">
           <Image
             src="/wolfsmartspec.png"
-            alt="Wolf SmartSpecs"
+            alt="Wolf SmartWear"
             width={520}
             height={380}
             className="product-card__image product-card__image--spec"
           />
           <div className="product-card__stack">
             <div className="product-card__title glass" role="note">
-              <h3>Wolf SmartSpecs</h3>
+              <h3>Wolf SmartWear</h3>
             </div>
             <div className="product-card__dialog glass" role="note">
               <p>
-                SmartSpecs are advanced smart glasses that provide live translation and real-time
+                SmartWear is an advanced smart eyewear solution that provides live translation and real-time
                 navigation directly through the lens. Featuring customizable powered lenses that
                 reduce glare and adapt to individual vision needs, they deliver intelligent
                 assistance with the comfort of everyday eyewear.
