@@ -469,6 +469,10 @@ html[data-theme="light"] {
 }
 
 .hero h1 .accent {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+  transform: translateY(-10px);
   color: rgb(211, 180, 106);
   text-shadow: 0 10px 24px rgba(211, 180, 106, 0.18);
 }
@@ -2376,6 +2380,16 @@ html[data-theme="light"] .footer {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-wrap: balance;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.25rem, 10vw, 3.2rem);
+    line-height: 1.06;
+  }
+
+  .hero h1 .accent {
+    font-size: clamp(1.02rem, 4.2vw, 1.22rem);
+    white-space: nowrap;
   }
 
   .services__panel {

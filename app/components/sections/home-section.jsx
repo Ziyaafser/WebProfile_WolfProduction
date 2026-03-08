@@ -31,7 +31,7 @@ export default function HomeSection() {
           <div className="hero__panel hero__panel--left">
             <h1>
               <span>Young Wolf</span>
-              <span className="accent">Production</span>
+              <span className="accent">Production | Engineering | Labs</span>
             </h1>
             <p className="hero__subtitle">Certified Engineering & Remote Operations Company</p>
             <p className="hero__reg">SSM 201903316877 (JM0921915-H)</p>

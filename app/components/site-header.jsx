@@ -25,13 +25,13 @@ export default function SiteHeader() {
         <span className="brand__badge">
           <Image
             src="/wolf logo bronze.png"
-            alt="Young Wolf Production logo"
+            alt="Young Wolf logo"
             width={28}
             height={28}
             className="brand__logo"
           />
         </span>
-        <span>Young Wolf Production</span>
+        <span>Young Wolf</span>
       </a>
       <nav className={`nav__links ${isMenuOpen ? "is-open" : ""}`}>
         {navLinks.map((link) => (

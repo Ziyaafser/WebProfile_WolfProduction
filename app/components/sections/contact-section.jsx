@@ -23,10 +23,14 @@ export default function ContactSection() {
             </div>
           </div>
           <div className="contact__item glass">
-            <span className="icon">⌂</span>
+            <span className="icon">in</span>
             <div>
-              <small>Address</small>
-              <p>No.19, Jalan Kiaramas 15, Kluang, Johor</p>
+              <small>LinkedIn</small>
+              <p>
+                <a href="https://www.linkedin.com/company/young-wolf/" target="_blank" rel="noreferrer">
+                  Young Wolf
+                </a>
+              </p>
             </div>
           </div>
           <div className="contact__item glass">

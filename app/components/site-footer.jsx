@@ -13,11 +13,11 @@ export default function SiteFooter() {
     <footer className="footer">
       <div className="footer__top">
         <div className="footer__logo">
-          <Image src="/footer logo.png" alt="Young Wolf Production logo" width={156} height={156} />
+          <Image src="/footer logo.png" alt="Young Wolf logo" width={156} height={156} />
         </div>
         <div className="footer__company">
           <h5>Company Information</h5>
-          <p>Young Wolf Production</p>
+          <p>Young Wolf</p>
           <p>SSM 201903316877 (JM0921915-H)</p>
           <p>Certified Engineering & Remote Operations Company</p>
         </div>
@@ -32,7 +32,7 @@ export default function SiteFooter() {
       </div>
       <div className="footer__bottom">
         <div>
-          <span>© 2026 Young Wolf Production. All rights reserved.</span>
+          <span>© 2026 Young Wolf. All rights reserved.</span>
         </div>
         <span>Powered by Innovation & Precision</span>
       </div>
