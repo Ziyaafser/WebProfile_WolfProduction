@@ -111,28 +111,28 @@ export const technologies = [
 export const projects = [
   {
     title: "Facade Inspection",
-    meta: "Singapore • 2022",
-    desc: "Comprehensive facade inspection using advanced UAV technology for high-rise commercial buildings"
+    meta: "Singapore",
+    desc: "This project involved a facade inspection of the commercial skyscraper One Raffles Place in Singapore. The objective was to assess the building exterior, identify areas requiring maintenance or repair, and provide detailed visual data to support client decision-making."
   },
   {
     title: "Floating Solar Farm Inspection",
-    meta: "China • 2023",
-    desc: "Large-scale inspection of floating solar panels using thermal imaging and visual documentation"
+    meta: "China",
+    desc: "This project covered inspection works for a large-scale floating solar farm in China. The objective was to assess panel condition, identify potential issues such as damaged cells, dirt, or debris, and deliver precise data for maintenance and performance optimization."
   },
   {
     title: "Solar Panel Inspection",
-    meta: "Taiwan • 2023",
-    desc: "Detailed solar panel inspection and efficiency analysis using IR thermal imaging"
+    meta: "Taiwan",
+    desc: "This project involved inspection of an industrial solar power plant in Taipei, Taiwan. The scope included detecting panel defects and identifying performance issues to support further analysis and planning."
   },
   {
     title: "Vessel Inspection (ROV)",
-    meta: "Port Klang • 2024",
-    desc: "ROV-based vessel inspection for underwater hull and structural assessments"
+    meta: "Port Klang",
+    desc: "This assignment involved an ROV-based inspection of an oil tanker at Port Klang. Critical vessel areas, including the hull, deck, propellers, and exhaust systems, were assessed to identify damage, maintenance needs, and operational performance risks."
   },
   {
     title: "RTK Drone Mapping",
-    meta: "Sime Darby Oil Palm Estate • 2024",
-    desc: "High-precision RTK drone mapping for land use and zoning analysis"
+    meta: "Sime Darby Oil Palm Estate",
+    desc: "This project utilized drone-based RTK (Real-Time Kinematic) technology to perform high-precision mapping at a Sime Darby Oil Palm Estate. The goal was to capture accurate topographical data for analysis, planning, and decision-making."
   }
 ];
 
