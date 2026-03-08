@@ -2353,6 +2353,7 @@ html[data-theme="light"] .footer {
     width: 100%;
     max-width: none;
     justify-items: center;
+    transform: translateX(9px);
   }
 
   .hero__panel {
@@ -2364,6 +2365,7 @@ html[data-theme="light"] .footer {
   .hero__logo {
     width: min(100%, 360px);
     margin-inline: auto;
+    transform: translateY(-15px);
   }
 
   .hero__credential-card {

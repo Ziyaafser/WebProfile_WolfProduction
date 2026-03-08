@@ -7,21 +7,23 @@ import { Color, MeshPhysicalMaterial } from "three";
 
 function LogoModel() {
   const { scene } = useGLTF("/logo.glb");
-  const platinumScene = useMemo(() => {
+  const bronzeScene = useMemo(() => {
     const clonedScene = scene.clone(true);
 
     clonedScene.traverse((child) => {
       if (!child.isMesh) return;
 
       child.material = new MeshPhysicalMaterial({
-        color: new Color("#f3f6fb"),
+        color: new Color("#efcf84"),
+        // Backup (platinum): color: new Color("#f3f6fb"),
         metalness: 1,
         roughness: 0.08,
         clearcoat: 1,
         clearcoatRoughness: 0.04,
         envMapIntensity: 2.4,
-        emissive: new Color("#c8d0da"),
-        emissiveIntensity: 0.18
+        emissive: new Color("#c7aa76"),
+        // Backup (platinum): emissive: new Color("#c8d0da"),
+        emissiveIntensity: 0.2
       });
       child.castShadow = true;
       child.receiveShadow = true;
@@ -30,7 +32,7 @@ function LogoModel() {
     return clonedScene;
   }, [scene]);
 
-  return <primitive object={platinumScene} scale={1.22} />;
+  return <primitive object={bronzeScene} scale={1.22} />;
 }
 
 function LogoControls() {
