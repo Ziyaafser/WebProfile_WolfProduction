@@ -36,9 +36,9 @@ export default function HomeSection() {
             <p className="hero__subtitle">Certified Engineering & Remote Operations Company</p>
             <p className="hero__reg">SSM 201903316877 (JM0921915-H)</p>
             <p className="hero__lead">
-              Since 2019, we have delivered <span className="hero__highlight">certified engineering</span> and{" "}
+              Since 2018, we have delivered <span className="hero__highlight">certified engineering</span> and{" "}
               <span className="hero__highlight">remote operations services</span> with over{" "}
-              <span className="hero__highlight">8 years of hands-on experience</span>. Our expertise includes{" "}
+              <span className="hero__highlight">9 years of hands-on experience</span>. Our expertise includes{" "}
               <span className="hero__highlight">mechanical works, inspections, data capture, surveying,
               mapping, and technical reporting, </span> with a focus on <span className="hero__highlight">accuracy</span>,{" "}
               <span className="hero__highlight">compliance</span>, and{" "}
