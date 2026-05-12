@@ -2418,12 +2418,12 @@ html[data-theme="light"] .footer {
   .hero__logo {
     width: min(100%, calc(100vw - 26px));
     margin-inline: auto;
-    min-height: clamp(325px, 88vw, 390px);
+    min-height: clamp(370px, 104vw, 470px);
   }
 
   .hero__logo .logo3d {
-    width: 88%;
-    height: 88%;
+    width: 82%;
+    height: 82%;
   }
 
   .hero__credential-card {
@@ -2734,7 +2734,7 @@ html[data-theme="light"] .footer {
   }
 
   .hero__logo .logo3d {
-    width: 84%;
-    height: 84%;
+    width: 78%;
+    height: 78%;
   }
 }
