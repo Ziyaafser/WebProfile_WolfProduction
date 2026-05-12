@@ -2481,6 +2481,12 @@ html[data-theme="light"] .footer {
     gap: 10px;
   }
 
+  html[data-theme="light"] .machinery__arrow {
+    background: #ffffff;
+    border-color: rgba(166, 166, 166, 0.58);
+    color: #737373;
+  }
+
   .machinery__mobile-card {
     width: 100%;
     min-width: 0;
@@ -2646,8 +2652,10 @@ html[data-theme="light"] .footer {
     justify-content: center;
     justify-items: center;
     gap: 4px;
+    margin-left: 0;
     padding-top: 10px;
     width: 100%;
+    transform: translateX(4px);
   }
 
   .footer__bottom span {
@@ -2682,6 +2690,19 @@ html[data-theme="light"] .footer {
 
   .contact__form h3 {
     margin-right: 0;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(166, 166, 166, 0.42);
+    color: #333333;
+  }
+
+  .contact__form input::placeholder,
+  .contact__form textarea::placeholder {
+    color: #555555;
+    opacity: 1;
   }
 
   .contact__form .cta {
