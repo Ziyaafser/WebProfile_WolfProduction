@@ -2418,7 +2418,7 @@ html[data-theme="light"] .footer {
   .hero__logo {
     width: min(100%, calc(100vw - 26px));
     margin-inline: auto;
-    min-height: clamp(300px, 82vw, 360px);
+    min-height: clamp(325px, 88vw, 390px);
   }
 
   .hero__logo .logo3d {
