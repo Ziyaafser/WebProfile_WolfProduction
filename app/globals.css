@@ -1112,11 +1112,12 @@ html[data-theme="light"] .services__panel-count {
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(211, 180, 106, 0.5);
+  border: 1px solid rgba(166, 166, 166, 0.5);
   background: rgba(12, 12, 12, 0.8);
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
   font-size: 1.2rem;
   cursor: pointer;
+  box-shadow: 0 0 18px rgba(166, 166, 166, 0.16);
 }
 
 .featured__grid {
@@ -2405,18 +2406,24 @@ html[data-theme="light"] .footer {
     width: 100%;
     max-width: none;
     justify-items: center;
+    transform: translateX(6px);
   }
 
   .hero__panel {
-    width: 100%;
+    width: min(100%, calc(100vw - 26px));
     margin-inline: auto;
     padding: 28px 20px;
   }
 
   .hero__logo {
-    width: 100%;
+    width: min(100%, calc(100vw - 26px));
     margin-inline: auto;
-    min-height: 360px;
+    min-height: clamp(300px, 82vw, 360px);
+  }
+
+  .hero__logo .logo3d {
+    width: 88%;
+    height: 88%;
   }
 
   .hero__credential-card {
@@ -2718,5 +2725,16 @@ html[data-theme="light"] .footer {
 
   .featured__img::after {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 20%, rgba(0, 0, 0, 0.2) 100%);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__layout {
+    transform: translateX(3px);
+  }
+
+  .hero__logo .logo3d {
+    width: 84%;
+    height: 84%;
   }
 }
