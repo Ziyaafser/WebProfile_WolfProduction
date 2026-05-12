@@ -98,7 +98,7 @@ const machineryImages = {
 };
 
 const technologyImages = [
-  "/advancedtechnology/lidarinspection3dstructure.png",
+  "/lidar new.png",
   "/advancedtechnology/cad.png",
   "/advancedtechnology/irthermalimaging.jpeg"
 ];

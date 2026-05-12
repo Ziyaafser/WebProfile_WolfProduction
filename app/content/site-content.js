@@ -138,7 +138,7 @@ export const projects = [
 
 export const featured = [
   {
-    title: "Fabrication of ROV for Hull Cleaning",
+    title: "R&D of ROV for Hull Inspections & Cleaning",
     tag: "2024–2025",
     desc: "Custom design and fabrication of remotely operated vehicles (ROV) specialized for underwater hull cleaning operations"
   },

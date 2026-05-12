@@ -21,7 +21,7 @@ const selectedProjectYears = {
 };
 
 const featuredProjectImages = {
-  "Fabrication of ROV for Hull Cleaning": [
+  "R&D of ROV for Hull Inspections & Cleaning": [
     "/featuredproject/rovfabri/rov1.jpg",
     "/featuredproject/rovfabri/rov2.jpg",
     "/featuredproject/rovfabri/rov3.jpg"

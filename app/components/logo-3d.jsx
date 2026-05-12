@@ -30,7 +30,7 @@ function LogoModel() {
     return clonedScene;
   }, [scene]);
 
-  return <primitive object={silverScene} scale={1.22} />;
+  return <primitive object={silverScene} scale={1.0} />;
 }
 
 function LogoControls() {

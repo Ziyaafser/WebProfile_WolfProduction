@@ -117,7 +117,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 6vw;
+  padding: 9px 6vw;
 }
 
 .nav__brand {
@@ -130,17 +130,17 @@ a {
 .brand__badge {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--line);
   font-weight: 700;
 }
 
 .brand__logo {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   display: block;
 }
@@ -160,8 +160,8 @@ a {
 
 .nav__menu-toggle {
   display: none;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
   border: 1px solid var(--line);
   background: var(--card);
@@ -182,8 +182,8 @@ a {
   align-items: center;
   justify-content: center;
   min-width: 104px;
-  height: 38px;
-  padding: 8px 20px;
+  height: 32px;
+  padding: 6px 17px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--card);
@@ -202,13 +202,13 @@ a {
 
 .theme-toggle__thumb {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #a6a6a6;
   top: 50%;
   transform: translateY(-50%);
-  right: 8px;
+  right: 9px;
   transition: transform var(--transition);
 }
 
@@ -256,7 +256,7 @@ section {
 .section__title p {
   font-size: 0.75rem;
   letter-spacing: 0.4em;
-  color: var(--accent);
+  color: #a6a6a6;
 }
 
 .section__title h2 {
@@ -492,10 +492,13 @@ html[data-theme="light"] {
   display: inline-flex;
   align-items: center;
   width: fit-content;
+  max-width: 100%;
   padding: 10px 18px;
   border-radius: 999px;
-  font-size: 1.3rem;
+  font-size: clamp(0.95rem, 1.35vw, 1.3rem);
   font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
   color: #0a0a0a;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.7);
@@ -600,19 +603,22 @@ html[data-theme="light"] .hero__subtitle {
   width: fit-content;
   padding: 14px 36px;
   border-radius: 16px;
-  border: 1px solid rgba(211, 180, 106, 0.55);
-  background: linear-gradient(180deg, rgba(211, 180, 106, 0.92), rgba(177, 145, 74, 0.9));
-  color: #111;
+  border: 1px solid rgba(166, 166, 166, 0.42);
+  background:
+    linear-gradient(180deg, rgba(248, 248, 248, 0.94), rgba(205, 205, 205, 0.82)),
+    rgba(166, 166, 166, 0.18);
+  color: #737373;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-weight: 700;
+  font-weight: 800;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(211, 180, 106, 0.28);
+  box-shadow: 0 20px 40px rgba(166, 166, 166, 0.24);
 }
 
 .scroll-indicator {
@@ -703,7 +709,7 @@ html[data-theme="light"] .hero__subtitle {
 .mission p {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
-  color: var(--accent);
+  color: #a6a6a6;
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
@@ -903,11 +909,11 @@ html[data-theme="light"] .mission__sdg-card.glass:hover {
 
 .tab.active {
   background:
-    linear-gradient(180deg, rgba(211, 180, 106, 0.26), rgba(211, 180, 106, 0.12)),
-    rgba(255, 255, 255, 0.04);
+    linear-gradient(180deg, rgba(188, 188, 188, 0.62), rgba(145, 145, 145, 0.44)),
+    rgba(166, 166, 166, 0.34);
   color: var(--text);
-  border-color: rgba(211, 180, 106, 0.52);
-  box-shadow: 0 12px 28px rgba(211, 180, 106, 0.16);
+  border-color: rgba(166, 166, 166, 0.22);
+  box-shadow: 0 12px 28px rgba(166, 166, 166, 0.28);
 }
 
 .tab:hover {
@@ -974,13 +980,13 @@ html[data-theme="light"] .mission__sdg-card.glass:hover {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  color: var(--accent);
+  color: #a6a6a6;
   font-weight: 700;
   letter-spacing: 0.08em;
   background:
-    linear-gradient(180deg, rgba(211, 180, 106, 0.22), rgba(211, 180, 106, 0.08)),
+    linear-gradient(180deg, rgba(166, 166, 166, 0.22), rgba(166, 166, 166, 0.08)),
     rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(211, 180, 106, 0.22);
+  border: 1px solid rgba(166, 166, 166, 0.22);
 }
 
 .service__item p {
@@ -1060,7 +1066,7 @@ html[data-theme="light"] .services__tabs-shell.glass:hover,
 html[data-theme="light"] .services__panel.glass:hover,
 html[data-theme="light"] .service__item.glass:hover {
   box-shadow: 0 14px 28px rgba(70, 70, 70, 0.08);
-  border-color: rgba(193, 163, 92, 0.2);
+  border-color: rgba(166, 166, 166, 0.2);
 }
 
 html[data-theme="light"] .tab {
@@ -1071,10 +1077,11 @@ html[data-theme="light"] .tab {
 
 html[data-theme="light"] .tab.active {
   background:
-    linear-gradient(180deg, rgba(211, 180, 106, 0.2), rgba(211, 180, 106, 0.08)),
-    rgba(255, 255, 255, 0.9);
+    linear-gradient(180deg, rgba(224, 224, 224, 0.96), rgba(184, 184, 184, 0.72)),
+    rgba(190, 190, 190, 0.62);
   color: #171717;
-  box-shadow: 0 10px 20px rgba(193, 163, 92, 0.12);
+  border-color: rgba(166, 166, 166, 0.22);
+  box-shadow: 0 12px 24px rgba(90, 90, 90, 0.2);
 }
 
 html[data-theme="light"] .services__panel-head {
@@ -1123,7 +1130,7 @@ html[data-theme="light"] .services__panel-count {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
   font-weight: 800;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .machine {
@@ -1157,7 +1164,7 @@ html[data-theme="light"] .services__panel-count {
 .machine__snake-line,
 .machine__snake-glow {
   fill: none;
-  stroke: rgb(211, 180, 106);
+  stroke: #a6a6a6;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 11 39 11 39;
@@ -1167,13 +1174,13 @@ html[data-theme="light"] .services__panel-count {
 .machine__snake-line {
   stroke-width: 0.74;
   opacity: 0.92;
-  filter: drop-shadow(0 0 1.5px rgba(211, 180, 106, 0.45));
+  filter: drop-shadow(0 0 1.5px rgba(166, 166, 166, 0.45));
 }
 
 .machine__snake-glow {
   stroke-width: 2.05;
   opacity: 0.5;
-  filter: blur(1px) drop-shadow(0 0 4px rgba(211, 180, 106, 0.5));
+  filter: blur(1px) drop-shadow(0 0 4px rgba(166, 166, 166, 0.5));
 }
 
 .machine > *:not(.machine__snake) {
@@ -1226,17 +1233,17 @@ html[data-theme="light"] .machine::after {
 
 html[data-theme="light"] .machine__snake-line {
   opacity: 0.82;
-  filter: drop-shadow(0 0 1px rgba(193, 163, 92, 0.32));
+  filter: drop-shadow(0 0 1px rgba(166, 166, 166, 0.32));
 }
 
 html[data-theme="light"] .machine__snake-glow {
   opacity: 0.4;
-  filter: blur(0.9px) drop-shadow(0 0 3px rgba(193, 163, 92, 0.34));
+  filter: blur(0.9px) drop-shadow(0 0 3px rgba(166, 166, 166, 0.34));
 }
 
 html[data-theme="light"] .machine.glass:hover {
   box-shadow: 0 12px 24px rgba(70, 70, 70, 0.08);
-  border-color: rgba(193, 163, 92, 0.2);
+  border-color: rgba(166, 166, 166, 0.2);
 }
 
 .tech__grid {
@@ -1249,12 +1256,13 @@ html[data-theme="light"] .machine.glass:hover {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
   font-weight: 800;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .tech-flip {
   position: relative;
-  min-height: 340px;
+  aspect-ratio: 16 / 10;
+  min-height: 0;
   perspective: 1400px;
 }
 
@@ -1282,7 +1290,7 @@ html[data-theme="light"] .machine.glass:hover {
   overflow: hidden;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border: 1px solid rgba(211, 180, 106, 0.55);
+  border: 1px solid rgba(166, 166, 166, 0.55);
 }
 
 .tech-flip__front {
@@ -1292,6 +1300,14 @@ html[data-theme="light"] .machine.glass:hover {
 .tech-flip__image {
   object-fit: cover;
   object-position: center;
+}
+
+.tech-flip:nth-child(1) .tech-flip__image {
+  transform: scale(1.12);
+}
+
+.tech-flip:nth-child(2) .tech-flip__image {
+  transform: scale(1.08);
 }
 
 .tech-flip__overlay {
@@ -1360,7 +1376,7 @@ html[data-theme="light"] .machine.glass:hover {
   transform: rotateY(180deg);
   background:
     radial-gradient(circle at 18% 15%, rgba(255, 255, 255, 0.22), transparent 34%),
-    linear-gradient(160deg, rgba(211, 180, 106, 0.96), rgba(179, 146, 74, 0.94));
+    linear-gradient(160deg, rgba(166, 166, 166, 0.96), rgba(140, 140, 140, 0.94));
   color: #171717;
   padding: 26px 24px;
   display: grid;
@@ -1401,7 +1417,7 @@ html[data-theme="light"] .machine.glass:hover {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
   font-weight: 800;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .product-pair {
@@ -1517,22 +1533,26 @@ html[data-theme="light"] .products__showcase {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
   font-weight: 800;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .featured .section__title p {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
   font-weight: 800;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .projects__carousel {
   position: relative;
+  --project-preview-top: 43%;
+  --project-preview-peek: 130px;
+  --project-preview-shift: 80px;
   min-height: 620px;
   border-radius: 30px;
   padding: 34px;
   display: block;
+  overflow: hidden;
 }
 
 html[data-theme="light"] .projects__carousel.glass {
@@ -1627,19 +1647,20 @@ html[data-theme="light"] .projects__carousel.glass::before {
 
 .project__upcoming {
   position: absolute;
-  top: 50%;
-  left: 48%;
-  transform: translateY(-50%);
+  top: var(--project-preview-top);
+  left: 54%;
+  transform: translate(var(--project-preview-shift), -50%);
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 14px;
-  width: calc(100% - 48% - 34px);
+  width: calc(100% - 54% - 34px + var(--project-preview-peek));
   z-index: 3;
 }
 
 .project__tile {
   position: relative;
-  flex: 1 1 0;
+  flex: 0 0 calc((100% - var(--project-preview-peek) - 42px) / 4);
   min-height: 246px;
   border-radius: 22px;
   overflow: hidden;
@@ -1690,16 +1711,16 @@ html[data-theme="light"] .projects__carousel.glass::before {
 
 .project__advance {
   position: absolute;
-  left: calc(47% - 26px);
-  top: 50%;
+  left: calc(54% - 28px + var(--project-preview-shift));
+  top: var(--project-preview-top);
   transform: translate(-50%, -50%);
   width: 56px;
   height: 56px;
   border-radius: 999px;
-  border: 1px solid rgba(211, 180, 106, 0.45);
+  border: 1px solid rgba(166, 166, 166, 0.45);
   background:
-    linear-gradient(155deg, rgba(248, 215, 136, 0.46), rgba(246, 195, 75, 0.411) 42%, rgba(86, 66, 28, 0.3) 100%),
-    rgba(211, 180, 106, 0.12);
+    linear-gradient(155deg, rgba(210, 210, 210, 0.46), rgba(166, 166, 166, 0.4) 42%, rgba(70, 70, 70, 0.3) 100%),
+    rgba(166, 166, 166, 0.12);
   backdrop-filter: blur(7px) saturate(150%);
   -webkit-backdrop-filter: blur(7px) saturate(150%);
   cursor: pointer;
@@ -1707,7 +1728,7 @@ html[data-theme="light"] .projects__carousel.glass::before {
   box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.45),
     0 4px 10px rgba(0, 0, 0, 0.2),
-    0 0 18px rgba(249, 208, 95, 0.705);
+    0 0 18px rgba(166, 166, 166, 0.6);
   z-index: 6;
   display: grid;
   place-items: center;
@@ -1730,7 +1751,7 @@ html[data-theme="light"] .projects__carousel.glass::before {
   border-radius: inherit;
   background:
     linear-gradient(160deg, rgba(218, 218, 218, 0.24), transparent 45%),
-    linear-gradient(0deg, rgb(255, 214, 118), transparent 55%);
+    linear-gradient(0deg, #a6a6a6, transparent 55%);
   pointer-events: none;
 }
 
@@ -1762,13 +1783,13 @@ html[data-theme="light"] .projects__carousel.glass::before {
 .project__advance:hover {
   transform: translate(-50%, -52%);
   background:
-    linear-gradient(155deg, rgba(219, 190, 116, 0.54), rgba(219, 190, 116, 0.24) 42%, rgba(98, 74, 31, 0.34) 100%),
-    rgba(219, 190, 116, 0.16);
-  border-color: rgba(219, 190, 116, 0.55);
+    linear-gradient(155deg, rgba(210, 210, 210, 0.54), rgba(166, 166, 166, 0.24) 42%, rgba(70, 70, 70, 0.34) 100%),
+    rgba(166, 166, 166, 0.16);
+  border-color: rgba(166, 166, 166, 0.55);
   box-shadow:
     0 16px 32px rgba(0, 0, 0, 0.52),
     0 6px 12px rgba(0, 0, 0, 0.24),
-    0 0 26px rgba(236, 206, 126, 0.56);
+    0 0 26px rgba(166, 166, 166, 0.5);
 }
 
 @keyframes project-active-swap {
@@ -1875,7 +1896,7 @@ html[data-theme="light"] .featured__card.glass::before {
   font-size: 0.92rem;
   letter-spacing: 0.34em;
   font-weight: 800;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .contact__grid {
@@ -1909,25 +1930,25 @@ html[data-theme="light"] .featured__card.glass::before {
   width: 38px;
   height: 38px;
   border-radius: 999px;
-  border: 1px solid rgba(211, 180, 106, 0.55);
+  border: 1px solid rgba(166, 166, 166, 0.55);
   background:
-    linear-gradient(155deg, rgba(211, 180, 106, 0.42), rgba(211, 180, 106, 0.18) 42%, rgba(86, 66, 28, 0.28) 100%),
-    rgba(211, 180, 106, 0.1);
+    linear-gradient(155deg, rgba(166, 166, 166, 0.42), rgba(166, 166, 166, 0.18) 42%, rgba(70, 70, 70, 0.28) 100%),
+    rgba(166, 166, 166, 0.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(7px) saturate(150%);
   -webkit-backdrop-filter: blur(7px) saturate(150%);
   display: inline-grid;
   place-items: center;
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 html[data-theme="dark"] .contact__item .icon {
-  border: 1px solid rgba(211, 180, 106, 0.55);
+  border: 1px solid rgba(166, 166, 166, 0.55);
   background:
-    linear-gradient(155deg, rgba(211, 180, 106, 0.42), rgba(211, 180, 106, 0.18) 42%, rgba(86, 66, 28, 0.28) 100%),
-    rgba(211, 180, 106, 0.1);
+    linear-gradient(155deg, rgba(166, 166, 166, 0.42), rgba(166, 166, 166, 0.18) 42%, rgba(70, 70, 70, 0.28) 100%),
+    rgba(166, 166, 166, 0.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
 }
 
 .contact__item small {
@@ -1962,12 +1983,12 @@ html[data-theme="dark"] .contact__item .icon {
   border-radius: 999px;
   display: inline-grid;
   place-items: center;
-  border: 1px solid rgba(211, 180, 106, 0.55);
+  border: 1px solid rgba(166, 166, 166, 0.55);
   background:
-    linear-gradient(155deg, rgba(211, 180, 106, 0.42), rgba(211, 180, 106, 0.18) 42%, rgba(86, 66, 28, 0.28) 100%),
-    rgba(211, 180, 106, 0.1);
+    linear-gradient(155deg, rgba(166, 166, 166, 0.42), rgba(166, 166, 166, 0.18) 42%, rgba(70, 70, 70, 0.28) 100%),
+    rgba(166, 166, 166, 0.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
@@ -1985,12 +2006,12 @@ html[data-theme="dark"] .contact__item .icon {
 .contact__form .cta {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(211, 180, 106, 0.55);
+  border: 1px solid rgba(166, 166, 166, 0.55);
   background:
-    linear-gradient(155deg, rgba(211, 180, 106, 0.42), rgba(211, 180, 106, 0.18) 42%, rgba(86, 66, 28, 0.28) 100%),
-    rgba(211, 180, 106, 0.1);
+    linear-gradient(155deg, rgba(166, 166, 166, 0.42), rgba(166, 166, 166, 0.18) 42%, rgba(70, 70, 70, 0.28) 100%),
+    rgba(166, 166, 166, 0.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
-  color: rgb(211, 180, 106);
+  color: #a6a6a6;
   backdrop-filter: blur(7px) saturate(150%);
   -webkit-backdrop-filter: blur(7px) saturate(150%);
 }
@@ -2002,7 +2023,7 @@ html[data-theme="dark"] .contact__item .icon {
   border-radius: inherit;
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.24), transparent 45%),
-    linear-gradient(0deg, rgba(211, 180, 106, 0.12), transparent 55%);
+    linear-gradient(0deg, rgba(166, 166, 166, 0.12), transparent 55%);
   pointer-events: none;
 }
 
@@ -2290,7 +2311,7 @@ html[data-theme="light"] .footer {
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 10px;
-    padding: 12px 4vw;
+    padding: 7px 4vw;
   }
 
   .nav__brand {
@@ -2306,14 +2327,14 @@ html[data-theme="light"] .footer {
   }
 
   .brand__badge {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     border-radius: 10px;
   }
 
   .brand__logo {
-    width: 22px;
-    height: 22px;
+    width: 21px;
+    height: 21px;
   }
 
   .nav__actions {
@@ -2325,8 +2346,8 @@ html[data-theme="light"] .footer {
 
   .nav__actions .theme-toggle__track {
     min-width: 96px;
-    height: 34px;
-    padding: 8px 16px;
+    height: 30px;
+    padding: 6px 15px;
   }
 
   .nav__actions .theme-toggle__icon {
@@ -2389,15 +2410,11 @@ html[data-theme="light"] .footer {
   }
 
   .hero__subtitle {
-    max-width: min(92vw, 310px);
+    max-width: 100%;
     padding: 7px 14px;
-    font-size: clamp(0.82rem, 3.2vw, 0.95rem);
-    line-height: 1.24;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-wrap: balance;
+    font-size: clamp(0.58rem, 2.65vw, 0.82rem);
+    line-height: 1.18;
+    white-space: nowrap;
   }
 
   .hero h1 {
@@ -2444,7 +2461,7 @@ html[data-theme="light"] .footer {
   }
 
   .tech-flip {
-    min-height: 320px;
+    min-height: 0;
   }
 
   .product-card__dialog {
@@ -2679,9 +2696,9 @@ html[data-theme="light"] .footer {
   }
 
   .featured__img-image {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    transform: none;
+    transform: scale(1.03);
     transition: opacity 560ms ease-in-out;
   }
 
