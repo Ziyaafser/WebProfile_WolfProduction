@@ -68,27 +68,27 @@ export const services = {
 
 export const machinery = [
   {
-    title: "Fiber Laser Cutting Machine",
+    title: "FIBER LASER CUTTING MACHINE",
     desc: "High-precision fiber laser cutting for metal fabrication with exceptional accuracy and speed"
   },
   {
-    title: "CO2 Laser Cutting & Engraving Machine",
+    title: "CO2 LASER CUTTING & ENGRAVING MACHINE",
     desc: "Versatile CO2 laser system for cutting and engraving various materials with fine detail"
   },
   {
-    title: "UV Flatbed Digital Inkjet Printer",
+    title: "UV FLATBED DIGITAL INKJET PRINTER",
     desc: "Advanced UV printing technology for high-quality direct-to-substrate printing"
   },
   {
-    title: "CNC Bending Machine",
+    title: "CNC BENDING MACHINE",
     desc: "Computer-controlled precision bending for complex metal forming operations"
   },
   {
-    title: "Mobile Laser Marking Machine",
+    title: "MOBILE LASER MARKING MACHINE",
     desc: "Portable laser marking solution for permanent, high-contrast marking and traceability"
   },
   {
-    title: "Fiber Laser Weld Machine & TIG Weld",
+    title: "FIBER LASER WELD MACHINE & TIG WELD",
     desc: "Advanced welding solutions including fiber laser and TIG for superior joint quality"
   }
 ];
@@ -133,22 +133,27 @@ export const projects = [
     title: "RTK Drone Mapping",
     meta: "Sime Darby Oil Palm Estate",
     desc: "This project utilized drone-based RTK (Real-Time Kinematic) technology to perform high-precision mapping at a Sime Darby Oil Palm Estate. The goal was to capture accurate topographical data for analysis, planning, and decision-making."
+  },
+  {
+    title: "Agricultural Drone Spraying",
+    meta: "Tawau",
+    desc: "Develop advanced expertise in the efficient, precise operation of drones for the application of pesticides, fertilizers and other agricultural crop treatments, while promoting sustainable farming practices and ensuring compliance with agricultural safety standards."
   }
 ];
 
 export const featured = [
   {
-    title: "R&D of ROV for Hull Inspections & Cleaning",
+    title: "R&D OF ROV FOR HULL INSPECTIONS & CLEANING",
     tag: "2024–2025",
     desc: "Custom design and fabrication of remotely operated vehicles (ROV) specialized for underwater hull cleaning operations"
   },
   {
-    title: "Fabrication & Welding Works",
+    title: "FABRICATION & WELDING WORKS",
     tag: "TIG • MIG • ARC",
     desc: "Professional TIG, MIG, and ARC welding services for industrial fabrication and custom metalwork"
   },
   {
-    title: "Laser Engraving Works",
+    title: "CNC,LASER ENGRAVING & 3D METAL PRINTING",
     tag: "OEM & Private Branding",
     desc: "OEM and private branding solutions using advanced laser engraving technology for precision marking"
   }

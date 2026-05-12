@@ -7,9 +7,10 @@ import { featured, projects } from "../../content/site-content";
 const selectedProjectImages = {
   "Facade Inspection": "/selectedproject/facadeinspect.jpg",
   "Floating Solar Farm Inspection": "/selectedproject/floatingsolarfarm.jpg",
-  "Solar Panel Inspection": "/selectedproject/solarpaneldrone.png",
+  "Solar Panel Inspection": "/selectedproject/solarpaneldrone1.png",
   "Vessel Inspection (ROV)": "/selectedproject/vesselinspect.png",
-  "RTK Drone Mapping": "/selectedproject/enhanced_drone_map_image.png"
+  "RTK Drone Mapping": "/selectedproject/enhanced_drone_map_image.png",
+  "Agricultural Drone Spraying": "/selectedproject/agriculture.png"
 };
 
 const selectedProjectYears = {
@@ -17,23 +18,24 @@ const selectedProjectYears = {
   "Floating Solar Farm Inspection": "2023",
   "Solar Panel Inspection": "2023",
   "Vessel Inspection (ROV)": "2024",
-  "RTK Drone Mapping": "2024"
+  "RTK Drone Mapping": "2024",
+  "Agricultural Drone Spraying": "2020"
 };
 
 const featuredProjectImages = {
-  "R&D of ROV for Hull Inspections & Cleaning": [
-    "/featuredproject/rovfabri/rov1.jpg",
-    "/featuredproject/rovfabri/rov2.jpg",
-    "/featuredproject/rovfabri/rov3.jpg"
+  "R&D OF ROV FOR HULL INSPECTIONS & CLEANING": [
+    "/featuredproject/rovfabri/rov1.jpeg",
+    "/featuredproject/rovfabri/rov2.png",
+    "/featuredproject/rovfabri/rov3.png"
   ],
-  "Fabrication & Welding Works": [
-    "/featuredproject/fabrication/fabri1.jpg",
-    "/featuredproject/fabrication/fabri2.jpg",
-    "/featuredproject/fabrication/fabri3.jpg"
+  "FABRICATION & WELDING WORKS": [
+    "/featuredproject/fabrication/fabri1.png",
+    "/featuredproject/fabrication/fabri2.png",
+    "/featuredproject/fabrication/fabri3.png"
   ],
-  "Laser Engraving Works": [
+  "CNC,LASER ENGRAVING & 3D METAL PRINTING": [
     "/featuredproject/laserengrave/laser1.jpg",
-    "/featuredproject/laserengrave/laser2.jpg",
+    "/featuredproject/laserengrave/laser2.png",
     "/featuredproject/laserengrave/laser3.jpg"
   ]
 };
@@ -99,6 +101,10 @@ export default function ProjectsSection() {
               fill
               className={`project__active-image${
                 activeProject.title === "Facade Inspection" ? " project__active-image--facade" : ""
+              }${
+                activeProject.title === "Agricultural Drone Spraying" ? " project__active-image--agriculture" : ""
+              }${
+                activeProject.title === "Solar Panel Inspection" ? " project__active-image--solar-panel" : ""
               }`}
             />
             <div className="project__active-overlay">

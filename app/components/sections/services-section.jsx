@@ -89,12 +89,12 @@ const serviceImages = {
 };
 
 const machineryImages = {
-  "Fiber Laser Cutting Machine": "/machinery/fiberlaser.jpg",
-  "CO2 Laser Cutting & Engraving Machine": "/machinery/co2laser.png",
-  "UV Flatbed Digital Inkjet Printer": "/machinery/uvflatbed.png",
-  "CNC Bending Machine": "/machinery/bendingmachine.png",
-  "Mobile Laser Marking Machine": "/machinery/mobilelaser.png",
-  "Fiber Laser Weld Machine & TIG Weld": "/machinery/fiberlaserweld.jpeg"
+  "FIBER LASER CUTTING MACHINE": "/machinery/fiberlaser.jpg",
+  "CO2 LASER CUTTING & ENGRAVING MACHINE": "/machinery/co2laser.png",
+  "UV FLATBED DIGITAL INKJET PRINTER": "/machinery/uvflatbed.png",
+  "CNC BENDING MACHINE": "/machinery/bendingmachine.png",
+  "MOBILE LASER MARKING MACHINE": "/machinery/mobilelaser.png",
+  "FIBER LASER WELD MACHINE & TIG WELD": "/machinery/fiberlaserweld.jpeg"
 };
 
 const technologyImages = [
