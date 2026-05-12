@@ -99,8 +99,8 @@ const machineryImages = {
 
 const technologyImages = [
   "/lidar new.png",
-  "/advancedtechnology/cad.png",
-  "/advancedtechnology/irthermalimaging.jpeg"
+  "/advancedtechnology/irthermalimaging.jpeg",
+  "/advancedtechnology/cad.png"
 ];
 
 export default function ServicesSection() {

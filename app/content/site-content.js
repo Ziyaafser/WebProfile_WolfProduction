@@ -99,12 +99,12 @@ export const technologies = [
     desc: "Advanced LiDAR technology for precise 3D mapping and structural analysis, providing detailed point cloud data for comprehensive inspection and modeling"
   },
   {
-    title: "AutoCAD 2D & 3D Modelling",
-    desc: "Professional CAD services for detailed technical drawings, 3D modeling, and engineering design documentation for complex projects"
-  },
-  {
     title: "IR Thermal Imaging",
     desc: "State-of-the-art infrared thermal imaging for predictive maintenance, energy audits, and identifying anomalies in electrical and mechanical systems"
+  },
+  {
+    title: "AutoCAD 2D & 3D Modelling",
+    desc: "Professional CAD services for detailed technical drawings, 3D modeling, and engineering design documentation for complex projects"
   }
 ];
 
