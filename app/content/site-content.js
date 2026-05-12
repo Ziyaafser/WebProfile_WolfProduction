@@ -27,18 +27,6 @@ export const sdgs = [
 export const services = {
   tabs: [
     {
-      id: "inspection",
-      label: "Inspection Works",
-      description: "Remote inspection and field monitoring services for built assets, energy sites, vessels, and land surveying.",
-      items: [
-        "Facade Inspection",
-        "Solar / Wind Farm Inspection",
-        "Construction Site & Environmental Monitoring",
-        "Vessels Inspection",
-        "Topographic Mapping & Surveying"
-      ]
-    },
-    {
       id: "engineering",
       label: "Engineering Works",
       description: "Practical engineering support across fabrication, repairs, technical troubleshooting, and custom build solutions.",
@@ -48,6 +36,18 @@ export const services = {
         "Repair & Troubleshooting of Control Systems",
         "Electronic Works & Installations",
         "Custom Engineering Solutions"
+      ]
+    },
+    {
+      id: "inspection",
+      label: "Inspection Works",
+      description: "Remote inspection and field monitoring services for built assets, energy sites, vessels, and land surveying.",
+      items: [
+        "Facade Inspection",
+        "Solar / Wind Farm Inspection",
+        "Construction Site & Environmental Monitoring",
+        "Vessels Inspection",
+        "Topographic Mapping & Surveying"
       ]
     },
     {

@@ -33,13 +33,6 @@ export default function ContactSection() {
               </p>
             </div>
           </div>
-          <div className="contact__item glass">
-            <span className="icon">◎</span>
-            <div>
-              <small>Instagram</small>
-              <p>@youngwolfstudios.one</p>
-            </div>
-          </div>
         </div>
         <form className="contact__form glass">
           <h3>Send a Message</h3>

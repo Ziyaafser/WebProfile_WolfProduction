@@ -99,7 +99,7 @@ const machineryImages = {
 
 const technologyImages = [
   "/advancedtechnology/lidarinspection3dstructure.png",
-  "/advancedtechnology/autocad2d3d.jpg",
+  "/advancedtechnology/cad.png",
   "/advancedtechnology/irthermalimaging.jpeg"
 ];
 

@@ -112,7 +112,7 @@ export default function HomeSection() {
                   <div key={item} className="mission__item glass">
                     <span className="icon">
                       <Image
-                        src="/wolf logo bronze.png"
+                        src="/youngwolflogo.png"
                         alt=""
                         width={22}
                         height={22}

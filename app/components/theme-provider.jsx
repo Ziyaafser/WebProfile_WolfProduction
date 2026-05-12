@@ -11,6 +11,26 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
+    let resizeTimer;
+
+    const handleResize = () => {
+      document.documentElement.classList.add("is-resizing");
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        document.documentElement.classList.remove("is-resizing");
+      }, 180);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.clearTimeout(resizeTimer);
+      document.documentElement.classList.remove("is-resizing");
+    };
+  }, []);
+
+  useEffect(() => {
     const stored = window.localStorage.getItem("ywp-theme");
     if (stored === "light" || stored === "dark") {
       setTheme(stored);

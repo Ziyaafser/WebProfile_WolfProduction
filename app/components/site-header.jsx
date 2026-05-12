@@ -24,7 +24,7 @@ export default function SiteHeader() {
       <a className="nav__brand" href="#home">
         <span className="brand__badge">
           <Image
-            src="/wolf logo bronze.png"
+            src="/youngwolflogo.png"
             alt="Young Wolf logo"
             width={28}
             height={28}

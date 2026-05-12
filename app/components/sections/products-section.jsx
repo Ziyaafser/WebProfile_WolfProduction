@@ -36,7 +36,7 @@ export default function ProductsSection() {
 
         <article className="product-pair product-pair--right">
           <Image
-            src="/wolfsmartspec.png"
+            src="/newspec.png"
             alt="Wolf SmartWear"
             width={520}
             height={380}
