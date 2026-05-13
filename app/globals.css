@@ -1407,8 +1407,8 @@ html[data-theme="light"] .machine.glass:hover {
   border-radius: 28px;
   padding: 42px 46px;
   background:
-    linear-gradient(145deg, rgba(211, 180, 106, 0.28), rgba(120, 96, 45, 0.24)),
-    url("/pattternbronze.png");
+    linear-gradient(145deg, rgba(211, 180, 106, 0.18), rgba(211, 180, 106, 0.12)),
+    url("/patternbronze1.png");
   background-size: cover;
   background-position: center;
   display: grid;
@@ -1529,7 +1529,7 @@ html[data-theme="light"] .machine.glass:hover {
 html[data-theme="light"] .products__showcase {
   background:
     linear-gradient(145deg, rgba(211, 180, 106, 0.18), rgba(211, 180, 106, 0.12)),
-    url("/pattternbronze.png");
+    url("/patternbronze1.png");
   background-size: cover;
   background-position: center;
   box-shadow: 0 6px 14px rgba(70, 70, 70, 0.05);
@@ -2585,8 +2585,18 @@ html[data-theme="light"] .footer {
     transform: none;
   }
 
+  .tech-flip__inner {
+    -webkit-transform-style: preserve-3d;
+  }
+
   .tech-flip.is-flipped .tech-flip__inner {
     transform: rotateY(180deg);
+  }
+
+  .tech-flip.is-flipped .tech-flip__overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: none;
   }
 
   .tech-flip__more--back {
