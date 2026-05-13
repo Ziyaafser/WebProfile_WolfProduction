@@ -82,10 +82,6 @@ export default function ProjectsSection() {
     setActiveIndex((prev) => (prev + 1) % orderedProjects.length);
   };
 
-  const handleRetreat = () => {
-    setActiveIndex((prev) => (prev - 1 + orderedProjects.length) % orderedProjects.length);
-  };
-
   return (
     <div className="projects-section" id="projects">
       <section className="projects">
@@ -134,8 +130,8 @@ export default function ProjectsSection() {
             <button
               type="button"
               className="project__advance"
-              aria-label="Show previous project"
-              onClick={handleRetreat}
+              aria-label="Show next project"
+              onClick={handleAdvance}
             >
               <span className="project__advance-icon" aria-hidden="true" />
             </button>

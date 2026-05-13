@@ -1726,7 +1726,7 @@ html[data-theme="light"] .projects__carousel.glass::before {
 
 .project__advance {
   position: absolute;
-  left: calc(54% - 28px + var(--project-preview-shift));
+  left: calc(54% - 44px + var(--project-preview-shift));
   top: var(--project-preview-top);
   transform: translate(-50%, -50%);
   width: 56px;
