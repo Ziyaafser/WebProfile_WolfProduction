@@ -34,7 +34,7 @@ const featuredProjectImages = {
     "/featuredproject/fabrication/fabri3.png"
   ],
   "CNC,LASER ENGRAVING & 3D METAL PRINTING": [
-    "/featuredproject/laserengrave/laser1.jpg",
+    "/featuredproject/laserengrave/laser4.jpeg",
     "/featuredproject/laserengrave/laser2.png",
     "/featuredproject/laserengrave/laser3.jpg"
   ]
