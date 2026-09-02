@@ -10,6 +10,17 @@ export const stats = [
   { value: "100+", label: "Projects" }
 ];
 
+export const contact = {
+  phoneDisplay: "+60 11-2123 0663",
+  email: "youngwolfproduction@gmail.com",
+  linkedInUrl: "https://www.linkedin.com/company/young-wolf/",
+  addressTitle: "No.12, Jalan Kluang Perdana 26",
+  address: "No.12, Jalan Kluang Perdana 26, Taman Kluang Perdana, 86000 Kluang, Johor Darul Ta'zim, Malaysia",
+  mapUrl: "https://maps.app.goo.gl/WPsg9fwVM6X4sbPn7",
+  mapEmbedUrl:
+    "https://www.google.com/maps?q=Young%20Wolf%20Engineering%402.0078377%2C103.2895089&z=18&output=embed"
+};
+
 export const mission = [
   "Deliver reliable, high-quality engineering and technical services across diverse sectors",
   "Continuously evolve by adopting advanced technologies like drone mapping, CNC machining, and ROV systems",

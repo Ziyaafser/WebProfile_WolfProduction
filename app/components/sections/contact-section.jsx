@@ -1,4 +1,35 @@
+"use client";
+
+import { getPhoneTelLink, getWhatsAppLink } from "../../content/contact-links";
+import { contact } from "../../content/site-content";
+
 export default function ContactSection() {
+  const phoneTelLink = getPhoneTelLink(contact.phoneDisplay);
+  const whatsAppLink = getWhatsAppLink(contact.phoneDisplay);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const subject = formData.get("subject")?.toString().trim();
+    const message = formData.get("message")?.toString().trim();
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      "",
+      "Message:",
+      message
+    ].join("\n");
+
+    const mailtoLink = `mailto:${contact.email}?subject=${encodeURIComponent(
+      subject || "Website inquiry"
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  }
+
   return (
     <section className="contact" id="contact">
       <div className="section__title center">
@@ -12,14 +43,14 @@ export default function ContactSection() {
             <span className="icon">☎</span>
             <div>
               <small>Phone</small>
-              <p>011-21230663</p>
+              <p>{contact.phoneDisplay}</p>
             </div>
           </div>
           <div className="contact__item glass">
             <span className="icon">✉</span>
             <div>
               <small>Email</small>
-              <p>youngwolfproduction@gmail.com</p>
+              <p>{contact.email}</p>
             </div>
           </div>
           <div className="contact__item glass">
@@ -27,35 +58,56 @@ export default function ContactSection() {
             <div>
               <small>LinkedIn</small>
               <p>
-                <a href="https://www.linkedin.com/company/young-wolf/" target="_blank" rel="noreferrer">
+                <a href={contact.linkedInUrl} target="_blank" rel="noreferrer">
                   Young Wolf
                 </a>
               </p>
             </div>
           </div>
+          <div className="contact__map glass">
+            <iframe
+              title="Young Wolf office location"
+              src={contact.mapEmbedUrl}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="contact__map-info">
+              <div>
+                <strong>{contact.addressTitle}</strong>
+                <p>{contact.address}</p>
+              </div>
+              <a href={contact.mapUrl} target="_blank" rel="noreferrer">
+                Open in Maps
+              </a>
+            </div>
+          </div>
         </div>
-        <form className="contact__form glass">
-          <h3>Send a Message</h3>
+        <form className="contact__form glass" onSubmit={handleSubmit}>
+          <h3>Enquire Here</h3>
           <label>
             Name
-            <input type="text" placeholder="Your name" />
+            <input name="name" type="text" placeholder="Your name" required />
           </label>
           <label>
             Email
-            <input type="email" placeholder="your@email.com" />
+            <input name="email" type="email" placeholder="your@email.com" required />
+          </label>
+          <label>
+            Subject
+            <input name="subject" type="text" placeholder="Project inquiry" required />
           </label>
           <label>
             Message
-            <textarea rows={4} placeholder="Tell us about your project..." />
+            <textarea name="message" rows={4} placeholder="Tell us about your project..." required />
           </label>
           <div className="contact__cta-row">
-            <button className="cta" type="button">
+            <button className="cta" type="submit">
               Send Message
             </button>
             <div className="contact__quick-actions" aria-label="Quick contact actions">
               <a
                 className="contact__quick-action contact__quick-action--whatsapp"
-                href="https://wa.me/601121230663"
+                href={whatsAppLink}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Chat on WhatsApp"
@@ -67,7 +119,7 @@ export default function ContactSection() {
               </a>
               <a
                 className="contact__quick-action contact__quick-action--call"
-                href="tel:01121230663"
+                href={phoneTelLink}
                 aria-label="Call phone number"
                 title="Call"
               >

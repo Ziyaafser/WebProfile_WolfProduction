@@ -1,4 +1,5 @@
 import { ThemeProvider } from "./components/theme-provider";
+import FloatingWhatsApp from "./components/floating-whatsapp";
 import SiteFooter from "./components/site-footer";
 import SiteHeader from "./components/site-header";
 import ContactSection from "./components/sections/contact-section";
@@ -22,6 +23,7 @@ export default function Home() {
         </main>
 
         <SiteFooter />
+        <FloatingWhatsApp />
       </div>
     </ThemeProvider>
   );
