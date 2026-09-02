@@ -2525,8 +2525,8 @@ html[data-theme="light"] .footer {
   }
 
   .floating-whatsapp {
-    right: 14px;
-    bottom: 14px;
+    right: 20px;
+    bottom: 24px;
     width: 52px;
     height: 52px;
   }
