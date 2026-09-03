@@ -16,13 +16,18 @@ const websiteJsonLd = {
 };
 
 export const metadata = {
+  metadataBase: new URL("https://www.wolves-official.com"),
   title: "Young Wolf Production | Engineering & Remote Operations",
   applicationName: "Young Wolf",
   description:
     "Certified engineering and remote operations company delivering precision, technology, and practical expertise.",
+  alternates: {
+    canonical: "/"
+  },
   openGraph: {
     title: "Young Wolf Production | Engineering & Remote Operations",
     siteName: "Young Wolf",
+    url: "https://www.wolves-official.com",
     description:
       "Certified engineering and remote operations company delivering precision, technology, and practical expertise."
   },
